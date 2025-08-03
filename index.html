@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Ingresando al portal de Aire</title>
+  <meta http-equiv="refresh" content="2;url=">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      overflow: hidden;
+      background: linear-gradient(270deg, #00c6a2, #00aaff, #00c6a2);
+      background-size: 600% 600%;
+      animation: bgMove 10s ease infinite;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      color: white;
+    }
+
+    @keyframes bgMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .logo-carga {
+      font-size: 3em;
+      font-weight: bold;
+      letter-spacing: 10px;
+      display: flex;
+      gap: 5px;
+      margin-bottom: 30px;
+    }
+
+    .logo-carga span {
+      animation: wave 1.2s infinite ease-in-out;
+      display: inline-block;
+      text-shadow: 0 0 10px #ffffff;
+    }
+
+    .logo-carga span:nth-child(1) { animation-delay: 0s; }
+    .logo-carga span:nth-child(2) { animation-delay: 0.1s; }
+    .logo-carga span:nth-child(3) { animation-delay: 0.2s; }
+    .logo-carga span:nth-child(4) { animation-delay: 0.3s; }
+
+    @keyframes wave {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      font-size: 2em;
+      text-align: center;
+      animation: fadeInText 2s ease-in-out;
+      text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+    }
+
+    @keyframes fadeInText {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .bubble {
+      position: absolute;
+      bottom: -100px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      animation: rise 10s infinite ease-in;
+    }
+
+    .bubble:nth-child(1) { width: 40px; height: 40px; left: 10%; animation-delay: 0s; }
+    .bubble:nth-child(2) { width: 60px; height: 60px; left: 30%; animation-delay: 2s; }
+    .bubble:nth-child(3) { width: 20px; height: 20px; left: 50%; animation-delay: 4s; }
+    .bubble:nth-child(4) { width: 50px; height: 50px; left: 70%; animation-delay: 1s; }
+    .bubble:nth-child(5) { width: 30px; height: 30px; left: 85%; animation-delay: 3s; }
+
+    @keyframes rise {
+      0% { bottom: -100px; transform: translateX(0) scale(1); opacity: 0; }
+      50% { opacity: 0.8; transform: translateX(-20px) scale(1.2); }
+      100% { bottom: 110%; transform: translateX(20px) scale(0.9); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Burbujas -->
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <!-- Nuevo logo animado -->
+  <div class="logo-carga">
+    <span>A</span><span>I</span><span>R</span><span>E</span>
+  </div>
+  <h1>Ingresando al portal de Aire...</h1>
+</body>
+</html>
